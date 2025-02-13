@@ -13,7 +13,7 @@ A Node.js and MongoDB-based application designed to manage departments and emplo
 
 1. Clone the repository:
 ```bash
-git clone [your-repository-url]
+git clone https://github.com/ttnhan227/Dental_Practice.git
 ```
 
 2. Navigate to the project directory:
