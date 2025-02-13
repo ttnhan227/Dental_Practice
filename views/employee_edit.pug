@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Edit Employee
+  form(action="/employees/" + employee._id + "?_method=PATCH", method="POST")
+    label(for="name") Name:
+    input(type="text", id="name", name="name", value=employee.name, required=true)
+    label(for="surname") Surname:
+    input(type="text", id="surname", name="surname", value=employee.surname, required=true)
+    label(for="birthDate") Birth Date:
+    input(type="date", id="birthDate", name="birthDate", value=employee.birthDate)
+    label(for="department") Department:
+    select(id="department", name="department", required=true)
+      each department in departments
+        option(value=department._id, selected=(employee.department && employee.department._id == department._id))= department.name
+    button(type="submit") Update

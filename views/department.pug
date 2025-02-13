@@ -1,0 +1,25 @@
+extends layout
+
+block content
+  h1 Departments
+  br
+  a.button(href="/departments/create") Create New Department
+  table.table
+    thead
+      tr
+        th Name
+        th Actions
+    tbody
+      if departments.length > 0
+        each department in departments
+          tr
+            td= department.name
+            td
+              div.actions
+                a.button(href="/departments/" + department._id) View
+                a.button(href="/departments/" + department._id + "/edit") Edit
+                form(action="/departments/" + department._id + "?_method=DELETE", method="POST")
+                  button.button-delete(type="submit") Delete
+      else
+        tr
+          td(colspan="2") No departments found.

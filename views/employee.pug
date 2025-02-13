@@ -1,0 +1,31 @@
+extends layout
+
+block content
+  h1 Employees
+  br
+  a.button(href="/employees/create") Create New Employee
+  table.table
+    thead
+      tr
+        th Name
+        th Surname
+        th Birth Date
+        th Department
+        th Actions
+    tbody
+      if employees.length > 0
+        each employee in employees
+          tr
+            td= employee.name
+            td= employee.surname
+            td= employee.birthDate
+            td= employee.department ? employee.department.name : ''
+            td
+              div.actions
+                a.button(href="/employees/" + employee._id) View
+                a.button(href="/employees/" + employee._id + "/edit") Edit
+                form(action="/employees/" + employee._id + "?_method=DELETE", method="POST")
+                  button.button-delete(type="submit") Delete
+      else
+        tr
+          td(colspan="5") No employees found.

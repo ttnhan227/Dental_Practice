@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1 Edit Department
+  form(action="/departments/" + department._id + "?_method=PATCH", method="POST")
+    div
+      label(for="name") Name:
+      input(type="text", id="name", name="name", value=department.name, required=true)
+    div
+      button(type="submit") Update

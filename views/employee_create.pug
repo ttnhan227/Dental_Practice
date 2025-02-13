@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 Create New Employee
+  form(action="/employees", method="POST")
+    label(for="name") Name:
+    input(type="text", id="name", name="name", required=true)
+    label(for="surname") Surname:
+    input(type="text", id="surname", name="surname", required=true)
+    label(for="birthDate") Birth Date:
+    input(type="date", id="birthDate", name="birthDate")
+    label(for="department") Department:
+    select(id="department", name="department", required=true)
+      each department in departments
+        option(value=department._id)= department.name
+    button(type="submit") Create
