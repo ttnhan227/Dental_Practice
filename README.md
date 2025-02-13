@@ -46,7 +46,6 @@ Create a `.env` file in the root directory of the project with the following con
 
 ```plaintext
 MONGODB_URI=your_mongodb_connection_string
-PORT=3000
 ```
 
 Replace `your_mongodb_connection_string` with your actual MongoDB connection string.
