@@ -12,16 +12,19 @@ A Node.js and MongoDB-based application designed to manage departments and emplo
 ## Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/ttnhan227/Dental_Practice.git
 ```
 
 2. Navigate to the project directory:
+
 ```bash
 cd Dental_Practice
 ```
 
 3. Build and start the application using Docker:
+
 ```bash
 docker-compose build
 docker-compose up
@@ -36,6 +39,17 @@ docker-compose up
 
 - Update the MongoDB connection string in the environment files
 - Configure any additional environment variables as needed
+
+### Creating the .env file
+
+Create a `.env` file in the root directory of the project with the following content:
+
+```plaintext
+MONGODB_URI=your_mongodb_connection_string
+PORT=3000
+```
+
+Replace `your_mongodb_connection_string` with your actual MongoDB connection string.
 
 ## Contributing
 
