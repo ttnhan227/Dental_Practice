@@ -18,7 +18,7 @@ git clone https://github.com/ttnhan227/Dental_Practice.git
 
 2. Navigate to the project directory:
 ```bash
-cd dental-practice-hr-management
+cd Dental_Practice
 ```
 
 3. Build and start the application using Docker:
